@@ -1,5 +1,5 @@
 //
-//  BNRAppDelegate.h
+//  BNRQuizViewController.h
 //  Quiz
 //
 //  Created by Hari  on 8/24/14.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNRAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface BNRQuizViewController : UIViewController
 
 @end
