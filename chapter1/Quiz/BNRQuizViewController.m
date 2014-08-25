@@ -25,7 +25,7 @@
     {
         self.questions=@[@"What is capital of Tonga ?",
                          @"What is the value of LOGe?",
-                         @"What is sugar general chemical formula" ];
+                         @"What is sugar chemical formula?" ];
         self.answers=@[@"Nuku'alofa",@"1",@"Cn(H2O)n"];
     }
     return self;
