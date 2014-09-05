@@ -38,7 +38,35 @@ int main(int argc, const char * argv[])
         item.serialNumber=@"A1B2C";
         item.valueInDollars=100;
         NSLog(@"%@ ",item);
+        
+        
+        BNRItem *itemWithName= [[BNRItem alloc]initWithItemName:@"Blue Sofa"];
+        NSLog(@"%@",itemWithName);
+        
+        BNRItem *itemWithNoName=[[BNRItem alloc]init];
+        NSLog(@"%@",itemWithNoName);
         items=nil;
+        
+         NSMutableArray *items1=[[NSMutableArray alloc] init];
+        for (int i=0;i<10;i++)
+        {
+            BNRItem *item=[BNRItem randomItem];
+            [items1 addObject:item];
+            
+        }
+        
+        for(BNRItem *item in items1)
+        {
+            NSLog(@"%@",item);
+        }
+        /* id lastObj1=[items lastObject];
+        NSLog(@"dosa %lu",[ lastObj1 count]);
+        id lastObj=[items1 lastObject];
+        [lastObj count];*/
+       // items1[11]; Bronze challenge NSRangeException
+        items1=nil;
+        
+        
     }
     return 0;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478D39BC19B95DB7004AC455 /* BNRContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 478D39BB19B95DB7004AC455 /* BNRContainer.m */; };
 		4790D98119B7893400A5B3CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4790D98019B7893400A5B3CC /* Foundation.framework */; };
 		4790D98419B7893400A5B3CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4790D98319B7893400A5B3CC /* main.m */; };
 		4790D98819B7893400A5B3CC /* RandomItems.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4790D98719B7893400A5B3CC /* RandomItems.1 */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		478D39BA19B95DB7004AC455 /* BNRContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRContainer.h; path = ../BNRContainer.h; sourceTree = "<group>"; };
+		478D39BB19B95DB7004AC455 /* BNRContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRContainer.m; path = ../BNRContainer.m; sourceTree = "<group>"; };
 		4790D97D19B7893400A5B3CC /* RandomItems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomItems; sourceTree = BUILT_PRODUCTS_DIR; };
 		4790D98019B7893400A5B3CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4790D98319B7893400A5B3CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 		4790D98219B7893400A5B3CC /* RandomItems */ = {
 			isa = PBXGroup;
 			children = (
+				478D39BA19B95DB7004AC455 /* BNRContainer.h */,
+				478D39BB19B95DB7004AC455 /* BNRContainer.m */,
 				4790D98319B7893400A5B3CC /* main.m */,
 				4790D98E19B796EE00A5B3CC /* BNRItem.h */,
 				4790D98F19B796EE00A5B3CC /* BNRItem.m */,
@@ -146,6 +151,7 @@
 			files = (
 				4790D98419B7893400A5B3CC /* main.m in Sources */,
 				4790D99019B796EE00A5B3CC /* BNRItem.m in Sources */,
+				478D39BC19B95DB7004AC455 /* BNRContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +265,7 @@
 				4790D98D19B7893400A5B3CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
