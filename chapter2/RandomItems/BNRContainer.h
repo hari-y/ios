@@ -9,5 +9,9 @@
 #import "BNRItem.h"
 
 @interface BNRContainer : BNRItem
+{
+    NSMutableArray *subItems;
+}
+
 
 @end

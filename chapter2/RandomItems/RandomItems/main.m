@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
-
+#import "BNRContainer.h"
 int main(int argc, const char * argv[])
 {
 
@@ -66,6 +66,9 @@ int main(int argc, const char * argv[])
        // items1[11]; Bronze challenge NSRangeException
         items1=nil;
         
+        //gold channgenge
+        BNRContainer *containerWithName= [[BNRContainer alloc]initWithItemName:@"Blue Sofa" serialNumber:@"3"];
+        NSLog(@"%@",containerWithName);
         
     }
     return 0;
