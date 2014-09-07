@@ -10,12 +10,15 @@
 //gold challenge
 @implementation BNRContainer
 
--(id)init
+
+
+-(instancetype) initWithItemName:(NSString *)name
+                    serialNumber:(NSString *) sNumber
 {
-    self=[super init];
+    self=[super initWithItemName:name];
     if(self)
     {
-       subItems=[[NSMutableArray alloc]init];
+        subItems=[[NSMutableArray alloc]init];
         for(int i=0;i<10;i++)
         {
             BNRItem *bnrItem=[BNRItem randomItem];
@@ -28,16 +31,16 @@
 -(NSString *) description
 {
     NSMutableString *temp=[[NSMutableString alloc]init];
-   NSString *descriptionString =[[NSString alloc] initWithFormat:@"%@ (%@): worth $%d, recorded on %@",
+   NSString *descriptionString =[[NSString alloc] initWithFormat:@"%@ Container (%@): worth $%d, recorded on %@ \n",
                       self.itemName , self.serialNumber, self.valueInDollars,self.dateCreated];
     [temp appendString:descriptionString];
-    for(int i=0;i<(sizeof subItems);i++)
+    for(int i=0;i<[subItems count];i++)
     {
-     descriptionString=[[NSString alloc] initWithFormat:@"%@ (%@): worth $%d, recorded on %@",
-                                 self.itemName , self.serialNumber, self.valueInDollars,self.dateCreated];
+     descriptionString=[[NSString alloc] initWithFormat:@"child %@  (%d) (%@): worth $%d, recorded on %@ \n",
+                                                   [subItems[i] itemName] , i,[subItems[i] serialNumber], [subItems[i]valueInDollars],[subItems[i] dateCreated]];
         [temp appendString:descriptionString];
         
     }
-    return descriptionString;
+    return temp;
 }
 @end
