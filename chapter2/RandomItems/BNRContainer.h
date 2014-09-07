@@ -10,6 +10,7 @@
 
 @interface BNRContainer : BNRItem
 {
+    @private
     NSMutableArray *subItems;
 }
 
