@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "A.h"
+#import "VariablesTest.h"
+#import "VariablesTestSubClass.h"
 #import "B.h"
 int main(int argc, const char * argv[])
 {
@@ -24,6 +26,15 @@ int main(int argc, const char * argv[])
          [temp abtest];
          [temp btest];
       
+        VariablesTestSubClass *temp1=[[VariablesTestSubClass alloc]init];
+        [temp1 test];
+       // NSLog(@(%@ %@ %@", test->publicString ,test->privateString ,test->defaultString"));
+        //temp1.publicInt=4;
+       // temp1.publicString=@"uthere";
+        
+        VariablesTest *temp2=[[VariablesTest alloc]init];
+        //temp1.publicInt=4;
+      //  temp2.publicString=@"uthere";
         
     }
     return 0;

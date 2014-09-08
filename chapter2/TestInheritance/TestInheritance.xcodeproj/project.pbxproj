@@ -12,6 +12,8 @@
 		47874E9F19BBB7C90022CF8C /* TestInheritance.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47874E9E19BBB7C90022CF8C /* TestInheritance.1 */; };
 		47874EAC19BBBA920022CF8C /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = 47874EA719BBBA920022CF8C /* B.m */; };
 		47874EAD19BBBA920022CF8C /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 47874EA919BBBA920022CF8C /* A.m */; };
+		478E5B2C19BCDB5C00F01342 /* VariablesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 478E5B2B19BCDB5C00F01342 /* VariablesTest.m */; };
+		478E5B2F19BCDC5700F01342 /* VariablesTestSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 478E5B2E19BCDC5700F01342 /* VariablesTestSubClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,10 @@
 		47874EA819BBBA920022CF8C /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B.h; path = ../B.h; sourceTree = "<group>"; };
 		47874EA919BBBA920022CF8C /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = A.m; path = ../A.m; sourceTree = "<group>"; };
 		47874EAA19BBBA920022CF8C /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = A.h; path = ../A.h; sourceTree = "<group>"; };
+		478E5B2A19BCDB5C00F01342 /* VariablesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VariablesTest.h; path = ../VariablesTest.h; sourceTree = "<group>"; };
+		478E5B2B19BCDB5C00F01342 /* VariablesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VariablesTest.m; path = ../VariablesTest.m; sourceTree = "<group>"; };
+		478E5B2D19BCDC5700F01342 /* VariablesTestSubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariablesTestSubClass.h; sourceTree = "<group>"; };
+		478E5B2E19BCDC5700F01342 /* VariablesTestSubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariablesTestSubClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,10 @@
 		47874E9919BBB7C90022CF8C /* TestInheritance */ = {
 			isa = PBXGroup;
 			children = (
+				478E5B2D19BCDC5700F01342 /* VariablesTestSubClass.h */,
+				478E5B2E19BCDC5700F01342 /* VariablesTestSubClass.m */,
+				478E5B2A19BCDB5C00F01342 /* VariablesTest.h */,
+				478E5B2B19BCDB5C00F01342 /* VariablesTest.m */,
 				47874EA719BBBA920022CF8C /* B.m */,
 				47874EA819BBBA920022CF8C /* B.h */,
 				47874EA919BBBA920022CF8C /* A.m */,
@@ -152,6 +162,8 @@
 				47874EAC19BBBA920022CF8C /* B.m in Sources */,
 				47874E9B19BBB7C90022CF8C /* main.m in Sources */,
 				47874EAD19BBBA920022CF8C /* A.m in Sources */,
+				478E5B2F19BCDC5700F01342 /* VariablesTestSubClass.m in Sources */,
+				478E5B2C19BCDB5C00F01342 /* VariablesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +277,7 @@
 				47874EA419BBB7C90022CF8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
