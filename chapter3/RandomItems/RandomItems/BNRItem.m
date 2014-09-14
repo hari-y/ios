@@ -34,11 +34,16 @@
     {
     self.itemName=name;
     self.serialNumber=sNumber;
-    self.dateCreated=[[NSDate alloc] init];
+    _dateCreated=[[NSDate alloc] init];
     }
     return self;
 }
 
+-(void) setContainedItem:(BNRItem *)containedItem
+{
+    _containedItem=containedItem;
+    self.containedItem.container=self;
+}
 -(instancetype) initWithItemName:(NSString *)name
 {
     return [self initWithItemName:name valueInDollars:0 serialNumber:@""];
