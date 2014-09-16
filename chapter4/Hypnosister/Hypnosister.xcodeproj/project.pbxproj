@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478D0FBE19C62F6D0038B527 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 478D0FBD19C62F6D0038B527 /* logo.png */; };
 		478D574019C5E2820028CDD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478D573F19C5E2820028CDD7 /* Foundation.framework */; };
 		478D574219C5E2820028CDD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478D574119C5E2820028CDD7 /* CoreGraphics.framework */; };
 		478D574419C5E2820028CDD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478D574319C5E2820028CDD7 /* UIKit.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		478D0FBD19C62F6D0038B527 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../../Solutions/00-Resources/logo.png"; sourceTree = "<group>"; };
 		478D573C19C5E2820028CDD7 /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478D573F19C5E2820028CDD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		478D574119C5E2820028CDD7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +117,7 @@
 				478D574E19C5E2820028CDD7 /* BNRAppDelegate.h */,
 				478D574F19C5E2820028CDD7 /* BNRAppDelegate.m */,
 				478D575119C5E2820028CDD7 /* Images.xcassets */,
+				478D0FBD19C62F6D0038B527 /* logo.png */,
 				478D574619C5E2820028CDD7 /* Supporting Files */,
 			);
 			path = Hypnosister;
@@ -227,6 +230,7 @@
 			files = (
 				478D574A19C5E2820028CDD7 /* InfoPlist.strings in Resources */,
 				478D575219C5E2820028CDD7 /* Images.xcassets in Resources */,
+				478D0FBE19C62F6D0038B527 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
