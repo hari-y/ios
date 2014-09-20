@@ -48,62 +48,43 @@
     
     //bronze challenge //gold challenge shadowing
     CGContextRef currentContext=UIGraphicsGetCurrentContext();
-    CGContextSaveGState(currentContext);
-    CGContextSetShadow(currentContext,CGSizeMake(4,7),3);
     
+    CGContextSaveGState(currentContext);
+      CGContextSetAlpha(currentContext, 1);
+    CGContextSetShadow(currentContext,CGSizeMake(4,7),3);
     CGRect imageRect=CGRectMake(50, 140, 200, 200);
     UIImage *logoImage=[UIImage imageNamed:@"logo.png"];
     [logoImage drawInRect:imageRect];
   
-    CGContextRestoreGState(currentContext);
+   
     
     //gold challenge gradient
-    CGContextSaveGState(currentContext);
-    
+
+    CGContextSetAlpha(currentContext, 0.5);
     CGFloat locations[2]={0.0,1.0};
-    CGFloat components[8]={1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0};
+    CGFloat components[8]={0.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0};
     CGColorSpaceRef colorSpace=CGColorSpaceCreateDeviceRGB();
     
     CGPoint firstPoint={150.0,100.0};
     CGPoint secondPoint={250.0,400.0};
     CGPoint thirdPoint={50.0,400.0};
     
-    
-   // CAGradientLayer * gradient = [CAGradientLayer layer];
-   
-   // [gradient setColors:[NSArray arrayWithObjects:(id)[highColor CGColor], (id)[lowColor CGColor], nil]];
-  CGContextSaveGState(currentContext);
+
     UIBezierPath *triangle = [UIBezierPath bezierPath];
-  
     [triangle moveToPoint:firstPoint];
     [triangle addLineToPoint:secondPoint];
     [triangle addLineToPoint:thirdPoint];
     [triangle closePath];
-    CGContextClip(currentContext);
-    // [gradient setFrame:[triangle bounds]];
+    [triangle addClip];
     
     CGGradientRef gradient=CGGradientCreateWithColorComponents(colorSpace, components, locations, 2);
     CGPoint startPoint = CGPointMake(150.0, 100.0);
     CGPoint endPoint = CGPointMake(250.0, 400.0);
-      [triangle addClip];
-    CGContextDrawLinearGradient(currentContext,gradient,startPoint, endPoint,0);
-
-    CGContextRestoreGState(currentContext);
-    
-    //CGGradientRef gradient=CGGradientCreateWithColorComponents(colorSpace, components, locations, 2);
-     //[path addClip];
-   
-  // CGContextDrawLinearGradient(currentContext,gradient,firstPoint,thirdPoint,0);
-   // CGContextDrawRadialGradient(currentContext, gradient, v1, angle, v2, angle, 0);
-    //[triangle fill];
-   // [triangle addClip];
-    //kCGGradientDrawsBeforeStartLocation|kCGGradientDrawsAfterEndLocation
-   CGGradientRelease(gradient);
-    
+    CGContextDrawLinearGradient(currentContext,gradient,startPoint, endPoint,kCGGradientDrawsBeforeStartLocation|kCGGradientDrawsAfterEndLocation);
+    CGGradientRelease(gradient);
     CGColorSpaceRelease(colorSpace);
+
      CGContextRestoreGState(currentContext);
-    
-    
     
 }
 
