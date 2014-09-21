@@ -7,6 +7,10 @@
 //
 
 #import "BNRHypnosisView.h"
+@interface BNRHypnosisView ()
+
+@property (strong,nonatomic) UIColor *circleColor;
+@end
 
 @implementation BNRHypnosisView
 
@@ -16,10 +20,12 @@
     if (self) {
         // Initialization code
         self.backgroundColor=[UIColor clearColor];
+        self.circleColor=[UIColor lightGrayColor];
         
     }
     return self;
 }
+
 
 
 // Only override drawRect: if you perform custom drawing.
@@ -43,7 +49,7 @@
         [path addArcWithCenter:center radius:currentRadius startAngle:0.0 endAngle:M_PI*2.0 clockwise:YES];
     }
     path.lineWidth=10;
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     [path stroke];
     
     //bronze challenge //gold challenge shadowing
@@ -88,5 +94,23 @@
     
 }
 
+-(void) setCircleColor:(UIColor *)circleColor
+{
+    _circleColor=circleColor;
+    [self setNeedsDisplay];
+}
 
+-(void)touchesBegan:(NSSet *)tocuhes withEvent:(UIEvent *)event
+{
+    NSLog(@"%@ was toudhed",self);
+    
+    float red=(arc4random()%100)/100.0;
+    float green =(arc4random()%100)/100.0;
+    float blue =(arc4random()%100)/100.0;
+    
+    UIColor *randomColor=[UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    self.circleColor=randomColor;
+    
+    
+}
 @end
