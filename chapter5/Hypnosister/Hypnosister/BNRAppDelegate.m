@@ -14,11 +14,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CGRect firstFrame=self.window.bounds;
+  
+    CGRect screenRect=self.window.bounds;
+    CGRect bigRect=screenRect;
+    bigRect.size.width *=3.0;
+    bigRect.size.height *=2.0;
     
-    BNRHypnosisView *firstView=[[BNRHypnosisView alloc] initWithFrame:firstFrame];
+    UIScrollView *scrollView=[[UIScrollView alloc]initWithFrame:screenRect];
+    [self.window addSubview:scrollView];
     
-    [self.window addSubview:firstView];
+   // BNRHypnosisView *hypnosisView=[[BNRHypnosisView alloc] initWithFrame:bigRect];
+      BNRHypnosisView *hypnosisView=[[BNRHypnosisView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:hypnosisView];
+    
+    
+    //add second hypnosis view
+    screenRect.origin.x+=screenRect.size.width;
+    BNRHypnosisView *anotherView=[[BNRHypnosisView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
+    scrollView.contentSize=bigRect.size;
+    
+    
+    //CGRect firstFrame=self.window.bounds;
+    
+   // BNRHypnosisView *firstView=[[BNRHypnosisView alloc] initWithFrame:firstFrame];
+    
+    //[self.window addSubview:firstView];
     
    
     // Override point for customization after application launch.
