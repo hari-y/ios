@@ -11,6 +11,7 @@
 #import "VariablesTest.h"
 #import "VariablesTestSubClass.h"
 #import "B.h"
+#import "PrivateTest.h"
 int main(int argc, const char * argv[])
 {
 
@@ -32,9 +33,13 @@ int main(int argc, const char * argv[])
         //temp1.publicInt=4;
        // temp1.publicString=@"uthere";
         
-        VariablesTest *temp2=[[VariablesTest alloc]init];
+      //  VariablesTest *temp2=[[VariablesTest alloc]init];
         //temp1.publicInt=4;
       //  temp2.publicString=@"uthere";
+        
+        id p=[[PrivateTest alloc]init];
+        [p atest];
+      NSLog(@"%@",[p atest]);
         
     }
     return 0;

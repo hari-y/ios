@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4779113019CF9CFD00A7411D /* PrivateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4779112F19CF9CFD00A7411D /* PrivateTest.m */; };
 		47874E9819BBB7C90022CF8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47874E9719BBB7C90022CF8C /* Foundation.framework */; };
 		47874E9B19BBB7C90022CF8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47874E9A19BBB7C90022CF8C /* main.m */; };
 		47874E9F19BBB7C90022CF8C /* TestInheritance.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47874E9E19BBB7C90022CF8C /* TestInheritance.1 */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4779112E19CF9CFD00A7411D /* PrivateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrivateTest.h; path = ../PrivateTest.h; sourceTree = "<group>"; };
+		4779112F19CF9CFD00A7411D /* PrivateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrivateTest.m; path = ../PrivateTest.m; sourceTree = "<group>"; };
 		47874E9419BBB7C90022CF8C /* TestInheritance */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestInheritance; sourceTree = BUILT_PRODUCTS_DIR; };
 		47874E9719BBB7C90022CF8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47874E9A19BBB7C90022CF8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 		47874E9919BBB7C90022CF8C /* TestInheritance */ = {
 			isa = PBXGroup;
 			children = (
+				4779112E19CF9CFD00A7411D /* PrivateTest.h */,
+				4779112F19CF9CFD00A7411D /* PrivateTest.m */,
 				478E5B2D19BCDC5700F01342 /* VariablesTestSubClass.h */,
 				478E5B2E19BCDC5700F01342 /* VariablesTestSubClass.m */,
 				478E5B2A19BCDB5C00F01342 /* VariablesTest.h */,
@@ -164,6 +169,7 @@
 				47874EAD19BBBA920022CF8C /* A.m in Sources */,
 				478E5B2F19BCDC5700F01342 /* VariablesTestSubClass.m in Sources */,
 				478E5B2C19BCDB5C00F01342 /* VariablesTest.m in Sources */,
+				4779113019CF9CFD00A7411D /* PrivateTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
