@@ -27,7 +27,9 @@
     self.segCon = [[UISegmentedControl alloc]
                    initWithItems:(NSArray *)@[@"Red",@"Green", @"Blue"]];
     
-    self.segCon.frame = CGRectMake(35, 200, 250, 50);
+    self.segCon.frame = CGRectMake(35, 50, 250, 50);
+    UIColor *segColor = [UIColor blackColor];
+    [self.segCon setTintColor:segColor];
     
     [self.segCon addTarget:self
                     action:@selector(changeColor:)
