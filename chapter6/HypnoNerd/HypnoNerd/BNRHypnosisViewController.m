@@ -8,6 +8,13 @@
 
 #import "BNRHypnosisViewController.h"
 #import "BNRHypnosisView.h"
+//#import "UISegmentedControl.h"
+
+@interface BNRHypnosisViewController()
+@property (strong, nonatomic) UISegmentedControl *segCon;
+
+- (void)changeColor:(id)sender;
+@end
 
 @implementation BNRHypnosisViewController
 
@@ -17,6 +24,15 @@
     CGRect frame=[UIScreen mainScreen].bounds;
     BNRHypnosisView *backgroundview=[[BNRHypnosisView alloc] initWithFrame:frame];
     self.view=backgroundview;
+    self.segCon = [[UISegmentedControl alloc]
+                   initWithItems:(NSArray *)@[@"Red",@"Green", @"Blue"]];
+    
+    self.segCon.frame = CGRectMake(35, 200, 250, 50);
+    
+    [self.segCon addTarget:self
+                    action:@selector(changeColor:)
+          forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.segCon];
 }
 
 -(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,5 +54,20 @@
     [super viewDidLoad];
     NSLog(@"BNRHypnosisViewController loaded its view");
     // Do any additional setup after loading the view.
+}
+
+- (void)changeColor:(id)sender
+{
+    NSLog(@"The Segment controller was touched %d", self.segCon.selectedSegmentIndex);
+    if(self.segCon.selectedSegmentIndex == 0){
+        ((BNRHypnosisView *)self.view).circleColor = [UIColor redColor];
+    }
+    if(self.segCon.selectedSegmentIndex == 1){
+        ((BNRHypnosisView *)self.view).circleColor = [UIColor greenColor];
+    }
+    if(self.segCon.selectedSegmentIndex == 2){
+        ((BNRHypnosisView *)self.view).circleColor = [UIColor blueColor];
+    }
+    
 }
 @end

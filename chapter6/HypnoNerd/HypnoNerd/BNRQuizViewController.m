@@ -27,6 +27,11 @@
                          @"What is the value of LOGe?",
                          @"What is sugar chemical formula?" ];
         self.answers=@[@"Nuku'alofa",@"1",@"Cn(H2O)n"];
+        self.tabBarItem.title=@"Quiz";
+        
+        UIImage *image=[UIImage imageNamed:@"Hypno.png"];
+        
+       self.tabBarItem.image=image;
     }
     return self;
 }
