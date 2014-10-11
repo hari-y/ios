@@ -11,7 +11,7 @@
 //#import "UISegmentedControl.h"
 
 @interface BNRHypnosisViewController()
-@property (strong, nonatomic) UISegmentedControl *segControl;
+@property (strong, nonatomic) UISegmentedControl *segCon;
 
 - (void)changeColor:(id)sender;
 @end
@@ -23,25 +23,17 @@
     
     CGRect frame=[UIScreen mainScreen].bounds;
     BNRHypnosisView *backgroundview=[[BNRHypnosisView alloc] initWithFrame:frame];
-   
-    //define frame
-    self.segControl = [[UISegmentedControl alloc]
-                   initWithItems:(NSArray *)@[@"Red",@"Green", @"Blue"]];
-    self.segControl.frame = CGRectMake(35, 50, 250, 50);
     
-    //define color
-    UIColor *segColor = [UIColor blackColor];
-    [self.segControl setTintColor:segColor];
+    CGRect textFieldRect=CGRectMake(40,70,240,30);
+    UITextField *textField=[[UITextField alloc] initWithFrame:textFieldRect];
     
-    //what happens when i click on the area
-    [self.segControl addTarget:self
-                     action:@selector(changeColor:)
-                     forControlEvents:UIControlEventValueChanged];
+    textField.borderStyle=UITextBorderStyleRoundedRect;
+    textField.placeholder=@"Hypnotize me";
+    textField.returnKeyType=UIReturnKeyDone;
     
-    //add to the main view
-    [backgroundview addSubview:self.segControl];
+    [backgroundview addSubview:textField];
     
-     self.view=backgroundview;
+    self.view=backgroundview;
 }
 
 -(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -67,14 +59,14 @@
 
 - (void)changeColor:(id)sender
 {
-    NSLog(@"The Segment controller was touched %d", self.segControl.selectedSegmentIndex);
-    if(self.segControl.selectedSegmentIndex == 0){
+    NSLog(@"The Segment controller was touched %d", self.segCon.selectedSegmentIndex);
+    if(self.segCon.selectedSegmentIndex == 0){
         ((BNRHypnosisView *)self.view).circleColor = [UIColor redColor];
     }
-    if(self.segControl.selectedSegmentIndex == 1){
+    if(self.segCon.selectedSegmentIndex == 1){
         ((BNRHypnosisView *)self.view).circleColor = [UIColor greenColor];
     }
-    if(self.segControl.selectedSegmentIndex == 2){
+    if(self.segCon.selectedSegmentIndex == 2){
         ((BNRHypnosisView *)self.view).circleColor = [UIColor blueColor];
     }
     

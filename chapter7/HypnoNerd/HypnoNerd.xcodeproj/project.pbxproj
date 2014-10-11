@@ -136,20 +136,20 @@
 		472E4F1A19E037330097CBE3 /* HypnoNerd */ = {
 			isa = PBXGroup;
 			children = (
-				4734560B19E1AA1100ECF43C /* quiz.png */,
 				473455FE19E1A59900ECF43C /* BNRQuizViewController.xib */,
 				473455FF19E1A59900ECF43C /* BNRQuizViewController.m */,
 				4734560019E1A59900ECF43C /* BNRQuizViewController.h */,
-				4745D04E19E0762100A8B4C5 /* logo.png */,
 				4745D04419E06DD900A8B4C5 /* BNRReminderViewController.m */,
 				4745D04519E06DD900A8B4C5 /* BNRReminderViewController.h */,
-				4745D03419E06CFC00A8B4C5 /* BNRReminderViewController.xib */,
 				4745D04619E06DD900A8B4C5 /* BNRHypnosisViewController.m */,
 				4745D04719E06DD900A8B4C5 /* BNRHypnosisViewController.h */,
+				4745D03419E06CFC00A8B4C5 /* BNRReminderViewController.xib */,
 				4745D03519E06CFC00A8B4C5 /* BNRHypnosisView.m */,
 				4745D03619E06CFC00A8B4C5 /* BNRHypnosisView.h */,
 				4745D03719E06CFC00A8B4C5 /* BNRAppDelegate.m */,
 				4745D03819E06CFC00A8B4C5 /* BNRAppDelegate.h */,
+				4734560B19E1AA1100ECF43C /* quiz.png */,
+				4745D04E19E0762100A8B4C5 /* logo.png */,
 				4745D02919E06CFC00A8B4C5 /* Time@2x.png */,
 				4745D02A19E06CFC00A8B4C5 /* Time.png */,
 				4745D02B19E06CFC00A8B4C5 /* main.m */,
