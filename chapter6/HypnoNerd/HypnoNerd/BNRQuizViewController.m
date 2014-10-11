@@ -29,9 +29,9 @@
         self.answers=@[@"Nuku'alofa",@"1",@"Cn(H2O)n"];
         self.tabBarItem.title=@"Quiz";
         
-        UIImage *image=[UIImage imageNamed:@"Hypno.png"];
+      //  UIImage *image=[UIImage imageNamed:@"Hypno.png"];
         
-       self.tabBarItem.image=image;
+      // self.tabBarItem.image=image;
     }
     return self;
 }
