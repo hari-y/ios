@@ -27,6 +27,12 @@
    
    // bigRect.size.height *=2.0;
     UIScrollView *scrollView=[[UIScrollView alloc]initWithFrame:screenRect];
+    
+    //silver challenge
+    scrollView.pagingEnabled = NO;
+    scrollView.delegate=self;
+    scrollView.minimumZoomScale=0.5;
+    scrollView.maximumZoomScale=6.0;
   //  [self.view addSubview:scrollView];
     
     // BNRHypnosisView *hypnosisView=[[BNRHypnosisView alloc] initWithFrame:bigRect];
@@ -37,7 +43,7 @@
     //add second hypnosis view
     screenRect.origin.x+=screenRect.size.width;
     BNRHypnosisView *anotherView=[[BNRHypnosisView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:anotherView];
+  // [scrollView addSubview:anotherView]; commented as zooming should identify the view
     
     scrollView.contentSize=bigRect.size;
    
@@ -57,6 +63,7 @@
     textField1.delegate=self;
     [hypnosisView addSubview:textField];
     [anotherView addSubview:textField1];
+    
     self.view=scrollView;
 }
 
@@ -141,5 +148,10 @@
         [messageLabel addMotionEffect:motionEffect];
         
     }
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return scrollView.subviews[0];
 }
 @end
