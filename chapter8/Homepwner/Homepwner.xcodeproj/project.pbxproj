@@ -1,0 +1,94 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		4775880219F29FB8008769D1 /* BNRItemsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemsTableViewController.h; sourceTree = "<group>"; };
+		4775880319F29FB8008769D1 /* BNRItemsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemsTableViewController.m; sourceTree = "<group>"; };
+		4775880819F2AB81008769D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4775880919F2AB81008769D1 /* BNRQuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNRQuizViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		477587FB19F29A87008769D1 = {
+			isa = PBXGroup;
+			children = (
+				4775880B19F2ABA1008769D1 /* New Group1 */,
+				4775880A19F2AB9A008769D1 /* New Group */,
+				4775880819F2AB81008769D1 /* main.m */,
+				4775880919F2AB81008769D1 /* BNRQuizViewController.xib */,
+				4775880219F29FB8008769D1 /* BNRItemsTableViewController.h */,
+				4775880319F29FB8008769D1 /* BNRItemsTableViewController.m */,
+			);
+			sourceTree = "<group>";
+		};
+		4775880A19F2AB9A008769D1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		4775880B19F2ABA1008769D1 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group1";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		477587FC19F29A87008769D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = 477587FF19F29A87008769D1 /* Build configuration list for PBXProject "Homepwner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 477587FB19F29A87008769D1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		4775880019F29A87008769D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4775880119F29A87008769D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		477587FF19F29A87008769D1 /* Build configuration list for PBXProject "Homepwner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4775880019F29A87008769D1 /* Debug */,
+				4775880119F29A87008769D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 477587FC19F29A87008769D1 /* Project object */;
+}
