@@ -14,6 +14,9 @@
 		478A793C19F36B8D00C93287 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A793B19F36B8D00C93287 /* BNRItemsViewController.m */; };
 		478A793F19F36DA000C93287 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A793E19F36DA000C93287 /* BNRItem.m */; };
 		478A794219F36F0C00C93287 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A794119F36F0C00C93287 /* BNRItemStore.m */; };
+		478ACB0A19F483F100C8B53F /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 478ACB0819F483F100C8B53F /* Contents.json */; };
+		478ACB0B19F483F100C8B53F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 478ACB0919F483F100C8B53F /* background.png */; };
+		478ACB0D19F4846000C8B53F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 478ACB0C19F4846000C8B53F /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		478A793E19F36DA000C93287 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		478A794019F36F0C00C93287 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		478A794119F36F0C00C93287 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		478ACB0819F483F100C8B53F /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Images.xcassets/AppIcon.appiconset/Contents.json; sourceTree = "<group>"; };
+		478ACB0919F483F100C8B53F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		478ACB0C19F4846000C8B53F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 		478A791319F36A3500C93287 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				478ACB0C19F4846000C8B53F /* logo.png */,
+				478ACB0919F483F100C8B53F /* background.png */,
 				478A793D19F36DA000C93287 /* BNRItem.h */,
 				478A793E19F36DA000C93287 /* BNRItem.m */,
 				478A791819F36A3500C93287 /* AppDelegate.h */,
@@ -100,6 +108,7 @@
 		478A791419F36A3500C93287 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				478ACB0819F483F100C8B53F /* Contents.json */,
 				478A791519F36A3500C93287 /* Info.plist */,
 				478A791619F36A3500C93287 /* main.m */,
 			);
@@ -203,7 +212,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478ACB0D19F4846000C8B53F /* logo.png in Resources */,
 				478A792219F36A3500C93287 /* Images.xcassets in Resources */,
+				478ACB0B19F483F100C8B53F /* background.png in Resources */,
+				478ACB0A19F483F100C8B53F /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +411,7 @@
 				478A793619F36A3500C93287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478A793719F36A3500C93287 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +420,7 @@
 				478A793919F36A3500C93287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

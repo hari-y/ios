@@ -38,11 +38,22 @@
            forCellReuseIdentifier:@"UITableViewCell"];
     UITableViewCell *footer = [[UITableViewCell alloc] init];
     footer.textLabel.text = @"No more items!";
-    footer.rowHeight=44;
+   // footer.rowHeight=44;
     self.tableView.tableFooterView = footer;
-    self.tableView.rowHeight = 60;
-     footer.d
+    self.tableView.rowHeight = 14;
+    // Image from http://walls.theultralinx.com/post/20175261592/spiral-circle
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+    // footer.d
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath   *)indexPath
+{
+    //NSLog(@"index path length %d index path row %d",indexPath.,indexPath.row);
+   
+        return 60;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -86,6 +97,9 @@
     
     item = items[indexPath.row];
     cell.textLabel.text = [item description];
+    cell.textLabel.font = [UIFont systemFontOfSize:20.0];
+    cell.textLabel.text = [item description];
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
