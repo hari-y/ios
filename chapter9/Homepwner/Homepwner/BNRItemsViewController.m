@@ -52,59 +52,29 @@
 
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
- 
-        return [[BNRItemsViewController filterItemsForSection:section] count];
-    
-}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return @"More than $50";
-    }
-    else {
-        return @"Less than $50";
-    }
+    // Return the number of rows in the section.
+    return [[[BNRItemStore sharedStore] allItems]count];
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    NSArray *items;
-    BNRItem *item;
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   // UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+   //                                               reuseIdentifier:@"UITableViewCell"];
+      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
-  items=[BNRItemsViewController filterItemsForSection:indexPath.section];
-    
-    item = items[indexPath.row];
-    cell.textLabel.text = [item description];
+    // Configure the cell...
+    NSArray *items=[[BNRItemStore sharedStore]allItems];
+    BNRItem *item=items[indexPath.row];
+    cell.textLabel.text=[item description];
     return cell;
+    
+   // return cell;
 }
 
-+ (NSArray *)filterItemsForSection:(NSInteger)section {
-    // Filter allItems to have only items for the requested section [elegant solution!]
-    NSPredicate *predicate;
-    if (section == 0) {         // section 0 === cheap items
-        predicate = [NSPredicate predicateWithFormat:@"valueInDollars > 50"];
-    }
-    else if (section == 1) {    // section 1 === valuable items
-        predicate = [NSPredicate predicateWithFormat:@"valueInDollars <= 50"];
-    }
-    else {
-        NSLog(@"Error: Expected no more than two sections");
-    }
-    
-    NSArray *allItems      = [[BNRItemStore sharedStore] allItems];
-    NSArray *filteredItems = [allItems filteredArrayUsingPredicate:predicate];
-    return filteredItems;
-}
 
 /*
 // Override to support conditional editing of the table view.
