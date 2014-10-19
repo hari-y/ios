@@ -1,22 +1,41 @@
 //
-//  BNRItemsTableViewController.m
+//  BNRItemsViewController.m
 //  Homepwner
 //
 //  Created by Hari  on 10/18/14.
-//
+//  Copyright (c) 2014 Pensersoft. All rights reserved.
 //
 
-#import "BNRItemsTableViewController.h"
+#import "BNRItemsViewController.h"
+#import "BNRItemStore.h"
 
-@interface BNRItemsTableViewController ()
+@interface BNRItemsViewController ()
 
 @end
 
-@implementation BNRItemsTableViewController
+@implementation BNRItemsViewController
 
+-(instancetype) init
+{
+    self=[super initWithStyle:UITableViewStylePlain];
+    if(self)
+    {
+        for(int i=0;i<5;i++)
+            {
+                [[BNRItemStore sharedStore] createItem];
+            }
+    }
+    return self;
+}
+
+-(instancetype) initWithStyle:(UITableViewStyle)style
+{
+    return [self init];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"UITableViewCell"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,27 +50,31 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return [[[BNRItemStore sharedStore] allItems]count];
 }
 
-/*
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+   // UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+   //                                               reuseIdentifier:@"UITableViewCell"];
+      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    NSArray *items=[[BNRItemStore sharedStore]allItems];
+    BNRItem *item=items[indexPath.row];
+    cell.textLabel.text=[item description];
     return cell;
+    
+   // return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
