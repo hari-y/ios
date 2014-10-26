@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4777D0D319FC9A03003E8701 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777D0D219FC9A03003E8701 /* HeaderView.xib */; };
 		478A791719F36A3500C93287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A791619F36A3500C93287 /* main.m */; };
 		478A791A19F36A3500C93287 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A791919F36A3500C93287 /* AppDelegate.m */; };
 		478A792219F36A3500C93287 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478A792119F36A3500C93287 /* Images.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4777D0D219FC9A03003E8701 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		478A791119F36A3500C93287 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478A791519F36A3500C93287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478A791619F36A3500C93287 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				478A791419F36A3500C93287 /* Supporting Files */,
 				478A793A19F36B8D00C93287 /* BNRItemsViewController.h */,
 				478A793B19F36B8D00C93287 /* BNRItemsViewController.m */,
+				4777D0D219FC9A03003E8701 /* HeaderView.xib */,
 				478A794019F36F0C00C93287 /* BNRItemStore.h */,
 				478A794119F36F0C00C93287 /* BNRItemStore.m */,
 			);
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				478A792219F36A3500C93287 /* Images.xcassets in Resources */,
+				4777D0D319FC9A03003E8701 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 				478A793619F36A3500C93287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478A793719F36A3500C93287 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +412,7 @@
 				478A793919F36A3500C93287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

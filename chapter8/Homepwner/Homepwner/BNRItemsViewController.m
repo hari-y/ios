@@ -38,11 +38,10 @@
            forCellReuseIdentifier:@"UITableViewCell"];
     UITableViewCell *footer = [[UITableViewCell alloc] init];
     footer.textLabel.text = @"No more items!";
+    //footer.
    // footer.rowHeight=44;
-    self.tableView.tableFooterView = footer;
-    self.tableView.rowHeight = 14;
-    // Image from http://walls.theultralinx.com/post/20175261592/spiral-circle
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+self.tableView.tableFooterView = footer;
+        self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
     // footer.d
 }
 
