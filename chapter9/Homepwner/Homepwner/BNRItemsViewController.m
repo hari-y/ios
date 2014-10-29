@@ -28,6 +28,10 @@
 }
 -(IBAction) addNewItem:(id) sender
 {
+    BNRItem *newItem=[[BNRItemStore sharedStore]createItem];
+    NSInteger lastRow=[[[BNRItemStore sharedStore]allItems]indexOfObject:newItem];
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:lastRow inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
     
 }
 
@@ -51,10 +55,10 @@
     self=[super initWithStyle:UITableViewStylePlain];
     if(self)
     {
-        for(int i=0;i<5;i++)
+       /* for(int i=0;i<5;i++)
             {
                 [[BNRItemStore sharedStore] createItem];
-            }
+            }*/
     }
     return self;
 }
@@ -118,23 +122,33 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *items=[[BNRItemStore sharedStore]allItems];
+        BNRItem *item=items[indexPath.row];
+        [[BNRItemStore sharedStore]removeItem:item];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
+
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    [[BNRItemStore sharedStore]moveItemAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
+    
 }
-*/
+
+//bronze challenge
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"Remove!";
+}
+
 
 /*
 // Override to support conditional rearranging of the table view.
