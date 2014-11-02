@@ -36,11 +36,7 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
-    UITableViewCell *footer = [[UITableViewCell alloc] init];
-    footer.textLabel.text = @"No more items!";
-    //footer.
-   // footer.rowHeight=44;
-self.tableView.tableFooterView = footer;
+    
         self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
     // footer.d
 }
@@ -48,8 +44,14 @@ self.tableView.tableFooterView = footer;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath   *)indexPath
 {
     //NSLog(@"index path length %d index path row %d",indexPath.,indexPath.row);
-   
+    
+    if([indexPath row] < [[[BNRItemStore sharedStore] allItems] count]) {
         return 60;
+    }
+    else
+    {
+        return 20;
+    }
 }
 
 
@@ -65,14 +67,21 @@ self.tableView.tableFooterView = footer;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (section == 0) {
+        return [[BNRItemsViewController filterItemsForSection:section] count] ;
+    }
+    else {
+        return [[BNRItemsViewController filterItemsForSection:section] count]+1 ;
+    }
+   
  
-        return [[BNRItemsViewController filterItemsForSection:section] count];
+    
     
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
+    if (section == 0 ) {
         return @"More than $50";
     }
     else {
@@ -88,17 +97,28 @@ self.tableView.tableFooterView = footer;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    
+    if(!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
     NSArray *items;
     BNRItem *item;
     
-  items=[BNRItemsViewController filterItemsForSection:indexPath.section];
-    
-    item = items[indexPath.row];
-    cell.textLabel.text = [item description];
-    cell.textLabel.font = [UIFont systemFontOfSize:20.0];
-    cell.textLabel.text = [item description];
-    cell.backgroundColor = [UIColor clearColor];
+    items=[BNRItemsViewController filterItemsForSection:indexPath.section];
+    if(indexPath.section==0 || (indexPath.section==1 && indexPath.row<indexPath.length)) {
+       
+        
+        item = items[indexPath.row];
+        cell.textLabel.text = [item description];
+        cell.textLabel.font = [UIFont systemFontOfSize:20.0];
+        cell.backgroundColor = [UIColor clearColor];
+     
+    }
+    else {
+        [[cell textLabel] setText:@"No more items!"];
+    }
+   
     return cell;
 }
 

@@ -74,6 +74,7 @@
     
     UIView *header=self.headerView;
     [self.tableView setTableHeaderView:header];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -93,34 +94,41 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return [[[BNRItemStore sharedStore] allItems]count];
+     return [[[BNRItemStore sharedStore] allItems] count] + 1;
 }
 
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   // UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-   //                                               reuseIdentifier:@"UITableViewCell"];
-      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     
-    // Configure the cell...
-    NSArray *items=[[BNRItemStore sharedStore]allItems];
-    BNRItem *item=items[indexPath.row];
-    cell.textLabel.text=[item description];
+    if(!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
+    
+    if([indexPath row] < [[[BNRItemStore sharedStore] allItems] count]) {
+        BNRItem *p = [[[BNRItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
+        [[cell textLabel] setText:[p description]];
+    } else {
+        [[cell textLabel] setText:@"No more items"];
+    }
+    
+    
     return cell;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+   // UITableViewCell *item = [tableView cellForRowAtIndexPath:indexPath];
     
-   // return cell;
+    if([indexPath row] < [[[BNRItemStore sharedStore] allItems] count]) {
+        return YES;
+    }
+    else
+    return NO;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 
 // Override to support editing the table view.
@@ -136,16 +144,25 @@
     }   
 }
 
-
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    if (proposedDestinationIndexPath.row >= [[[BNRItemStore sharedStore] allItems] count]) {
+        return sourceIndexPath;
+    }
+    
+    return proposedDestinationIndexPath;
+}
 
 // Override to support rearranging the table view.
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-    [[BNRItemStore sharedStore]moveItemAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
+    if (toIndexPath.row < [[[BNRItemStore sharedStore] allItems] count]) {
+        [[BNRItemStore sharedStore] moveItemAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
+    }
     
 }
 
 //bronze challenge
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(NSString *)tableView:(UITableView *)tableView :(NSIndexPath *)indexPath {
     return @"Remove!";
 }
 
