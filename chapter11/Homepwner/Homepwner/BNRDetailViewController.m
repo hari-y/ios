@@ -10,6 +10,7 @@
 #import "BNRDateViewController.h"
 #import "BNRItem.h"
 #import "BNRImageStore.h"
+#import "CameraOverlayView.h"
 
 @interface BNRDetailViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -21,7 +22,7 @@
 - (IBAction)changeDate:(id)sender;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIButton *clearButton;
-
+@property UIPopoverController *imagePickerPopover;
 @end
 
 @implementation BNRDetailViewController
@@ -66,7 +67,11 @@
    */
      imagePicker.delegate = self;
     // PLACE IMAGE PICKER ON THE SCREEN
-    [self presentViewController:imagePicker animated:YES completion:nil];
+    //------------------------------------------------------------------------------------
+   
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    
+   // [self presentViewController:imagePicker animated:YES completion:nil];
 
 }
 

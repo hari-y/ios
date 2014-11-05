@@ -19,6 +19,8 @@
 		478A794219F36F0C00C93287 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 478A794119F36F0C00C93287 /* BNRItemStore.m */; };
 		478EEE931A0A91A4002BA73E /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 478EEE921A0A91A4002BA73E /* BNRImageStore.m */; };
 		478EEE981A0A959D002BA73E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478EEE961A0A952F002BA73E /* CoreGraphics.framework */; };
+		478EEE9A1A0AB7F1002BA73E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478EEE991A0AB7F1002BA73E /* CoreMedia.framework */; };
+		478EEE9D1A0AB8B3002BA73E /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 478EEE9C1A0AB8B3002BA73E /* CameraOverlayView.m */; };
 		47E192BC1A0991A0007C5AE7 /* BNRDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E192BB1A0991A0007C5AE7 /* BNRDateViewController.m */; };
 		47E192BE1A099E48007C5AE7 /* BNRDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E192BD1A099E48007C5AE7 /* BNRDateViewController.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,9 @@
 		478EEE921A0A91A4002BA73E /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 		478EEE941A0A9519002BA73E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		478EEE961A0A952F002BA73E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		478EEE991A0AB7F1002BA73E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		478EEE9B1A0AB8B3002BA73E /* CameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraOverlayView.h; path = ../CameraOverlayView.h; sourceTree = "<group>"; };
+		478EEE9C1A0AB8B3002BA73E /* CameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraOverlayView.m; path = ../CameraOverlayView.m; sourceTree = "<group>"; };
 		47E192BA1A0991A0007C5AE7 /* BNRDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDateViewController.h; sourceTree = "<group>"; };
 		47E192BB1A0991A0007C5AE7 /* BNRDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDateViewController.m; sourceTree = "<group>"; };
 		47E192BD1A099E48007C5AE7 /* BNRDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRDateViewController.xib; path = ../BNRDateViewController.xib; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478EEE9A1A0AB7F1002BA73E /* CoreMedia.framework in Frameworks */,
 				478EEE981A0A959D002BA73E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +90,7 @@
 		478A790819F36A3500C93287 = {
 			isa = PBXGroup;
 			children = (
+				478EEE991A0AB7F1002BA73E /* CoreMedia.framework */,
 				478EEE961A0A952F002BA73E /* CoreGraphics.framework */,
 				478EEE941A0A9519002BA73E /* CoreImage.framework */,
 				478A791319F36A3500C93287 /* Homepwner */,
@@ -104,6 +111,8 @@
 		478A791319F36A3500C93287 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				478EEE9B1A0AB8B3002BA73E /* CameraOverlayView.h */,
+				478EEE9C1A0AB8B3002BA73E /* CameraOverlayView.m */,
 				478EEE911A0A91A4002BA73E /* BNRImageStore.h */,
 				478EEE921A0A91A4002BA73E /* BNRImageStore.m */,
 				47E192BD1A099E48007C5AE7 /* BNRDateViewController.xib */,
@@ -255,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E192BC1A0991A0007C5AE7 /* BNRDateViewController.m in Sources */,
+				478EEE9D1A0AB8B3002BA73E /* CameraOverlayView.m in Sources */,
 				475B20ED1A07026700DDC7B1 /* BNRDetailViewController.m in Sources */,
 				478A794219F36F0C00C93287 /* BNRItemStore.m in Sources */,
 				478A791A19F36A3500C93287 /* AppDelegate.m in Sources */,
