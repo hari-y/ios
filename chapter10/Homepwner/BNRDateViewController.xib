@@ -7,13 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRDateViewController">
             <connections>
-                <outlet property="datePicker" destination="OgG-K2-dm3" id="t2y-Ma-kQg"/>
-                <outlet property="view" destination="UUU-Wf-yK7" id="Iz1-K8-eEh"/>
+                <outlet property="datePicker" destination="OgG-K2-dm3" id="w0y-cH-4Tz"/>
+                <outlet property="view" destination="s65-sa-OkN" id="mUK-zt-HXO"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="UUU-Wf-yK7">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="s65-sa-OkN">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OgG-K2-dm3">
@@ -22,12 +22,22 @@
                         <!--2014-11-05 00:08:56 +0000-->
                     </date>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="124" y="172" width="153" height="162"/>
+                        <rect key="frame" x="71" y="192" width="258" height="216"/>
                     </variation>
                 </datePicker>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="339" y="383"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="OgG-K2-dm3"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="OgG-K2-dm3"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="483" y="281"/>
         </view>
     </objects>
 </document>

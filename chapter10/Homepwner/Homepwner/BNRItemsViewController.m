@@ -29,12 +29,16 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if([indexPath row] < [[[BNRItemStore sharedStore] allItems] count])
+    {
     BNRDetailViewController *detailViewController=[[BNRDetailViewController alloc]init];
     NSArray *items=[[BNRItemStore sharedStore]allItems];
     BNRItem *selectedItem=items[indexPath.row];
     detailViewController.item=selectedItem;
     
     [self.navigationController pushViewController:detailViewController animated:YES];
+    }
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated

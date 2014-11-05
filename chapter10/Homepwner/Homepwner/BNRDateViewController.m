@@ -10,7 +10,8 @@
 #import "BNRItem.h"
 
 @interface BNRDateViewController ()
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 
 @end
