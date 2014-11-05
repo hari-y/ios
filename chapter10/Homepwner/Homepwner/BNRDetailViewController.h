@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BNRItem.h"
+
+@class BNRItem;
 
 @interface BNRDetailViewController : UIViewController
 @property (nonatomic,strong) BNRItem *item;

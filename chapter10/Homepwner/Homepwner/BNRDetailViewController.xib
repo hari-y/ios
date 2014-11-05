@@ -28,15 +28,6 @@
                         <rect key="frame" x="20" y="172" width="94" height="21"/>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-t5-4k3">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="20" y="311" width="312" height="31"/>
-                    </variation>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3Z-Fs-Dhk">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -46,10 +37,21 @@
                         <rect key="frame" x="20" y="102" width="88" height="30"/>
                     </variation>
                 </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcD-3C-tsD">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="135" y="99" width="192" height="30"/>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="hqW-tc-K9z"/>
+                    </connections>
+                </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-Qm-d3O">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="130" y="163" width="192" height="30"/>
                     </variation>
@@ -60,7 +62,7 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="590-gf-ulC">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="130" y="234" width="192" height="30"/>
                     </variation>
@@ -77,39 +79,51 @@
                         <rect key="frame" x="20" y="238" width="64" height="21"/>
                     </variation>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcD-3C-tsD">
-                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k83-bG-h3U">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Change Date">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="135" y="99" width="192" height="30"/>
+                        <rect key="frame" x="68" y="369" width="102" height="30"/>
                     </variation>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="hqW-tc-K9z"/>
+                        <action selector="changeDate:" destination="-1" eventType="touchUpInside" id="GBi-Cv-Gzy"/>
                     </connections>
-                </textField>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-t5-4k3">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="50" y="302" width="229" height="33"/>
+                    </variation>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="6X7-pP-B2d"/>
-                    <exclude reference="2fh-t5-4k3"/>
                     <exclude reference="K3Z-Fs-Dhk"/>
+                    <exclude reference="PcD-3C-tsD"/>
                     <exclude reference="ejK-Qm-d3O"/>
                     <exclude reference="590-gf-ulC"/>
                     <exclude reference="2Rr-JR-u8R"/>
-                    <exclude reference="PcD-3C-tsD"/>
+                    <exclude reference="k83-bG-h3U"/>
+                    <exclude reference="2fh-t5-4k3"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="6X7-pP-B2d"/>
-                    <include reference="2fh-t5-4k3"/>
                     <include reference="K3Z-Fs-Dhk"/>
+                    <include reference="PcD-3C-tsD"/>
                     <include reference="ejK-Qm-d3O"/>
                     <include reference="590-gf-ulC"/>
                     <include reference="2Rr-JR-u8R"/>
-                    <include reference="PcD-3C-tsD"/>
+                    <include reference="k83-bG-h3U"/>
+                    <include reference="2fh-t5-4k3"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="165" y="184"/>

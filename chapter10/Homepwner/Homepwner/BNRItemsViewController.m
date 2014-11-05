@@ -16,7 +16,7 @@
 
 @implementation BNRItemsViewController
 
--(UIView *) headerView
+/*-(UIView *) headerView
 {
     if(!_headerView)
     {
@@ -25,7 +25,7 @@
                                      options:nil];
     }
     return _headerView;
-}
+}*/
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -51,7 +51,7 @@
     
 }
 
--(IBAction) toggleEditingMode:(id)sender
+/*-(IBAction) toggleEditingMode:(id)sender
 {
     if(self.isEditing)
     {
@@ -64,7 +64,7 @@
         [self setEditing:YES animated:YES];
     }
     
-}
+}*/
 
 -(instancetype) init
 {
@@ -73,6 +73,10 @@
     {
         UINavigationItem *navItem=self.navigationItem;
         navItem.title=@"Homepwner";
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
+        
+        navItem.rightBarButtonItem = bbi;
+        navItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
@@ -86,8 +90,8 @@
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
     
-    UIView *header=self.headerView;
-    [self.tableView setTableHeaderView:header];
+ //   UIView *header=self.headerView;
+   // [self.tableView setTableHeaderView:header];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
