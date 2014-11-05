@@ -39,4 +39,5 @@ NSString *_itemKey;
 -(void)setDateCreated:(NSDate *)date;
 
 -(NSString *) itemKey;
+-(void) setItemKey:(NSString *) str;
 @end

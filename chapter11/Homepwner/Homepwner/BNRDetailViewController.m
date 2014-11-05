@@ -20,12 +20,30 @@
 
 - (IBAction)changeDate:(id)sender;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+@property (weak, nonatomic) IBOutlet UIButton *clearButton;
+
 @end
 
 @implementation BNRDetailViewController
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+}
+- (IBAction)clearImage:(id)sender {
+    if ([self.item itemKey ]) {
+        
+        // Remove the image from the screen
+        [self.imageView setImage:nil];
+        
+        // Delete the image form the image store
+        [[BNRImageStore sharedStore] deleteImageForKey:[self.item itemKey]];
+        
+        // Delete the imageKey of the item
+        //[self.item setItemKey:nil];
+        
+        // Hide the clearImage button
+        [self.clearButton setHidden:YES];
+    }
 }
 
 - (IBAction)takePicture:(id)sender {
@@ -58,6 +76,7 @@
     [[BNRImageStore sharedStore]setImage:image forKey:self.item.itemKey];
     self.imageView.image=image;
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.clearButton setHidden:NO];
 }
 
 - (IBAction)changeDate:(id)sender {
@@ -87,9 +106,13 @@
     
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
     NSString *itemKey=item.itemKey;
-    
+    if ([self.item itemKey ]) {
     UIImage *imageToDisplay=[[BNRImageStore sharedStore]imageForKey:itemKey];
     self.imageView.image=imageToDisplay;
+        if(imageToDisplay==nil)
+          [self.clearButton setHidden:YES];
+    }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated

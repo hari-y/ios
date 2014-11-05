@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRDetailViewController">
             <connections>
+                <outlet property="clearButton" destination="7eP-uT-uVN" id="AZR-Lf-0Jb"/>
                 <outlet property="dateLabel" destination="2fh-t5-4k3" id="ODa-id-hJ8"/>
                 <outlet property="imageView" destination="JJu-Js-sea" id="AbM-ZB-Er3"/>
                 <outlet property="nameField" destination="PcD-3C-tsD" id="GZK-n1-8dS"/>
@@ -105,7 +106,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-Js-sea">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="55" y="283" width="240" height="128"/>
+                        <rect key="frame" x="15" y="281" width="240" height="128"/>
                     </variation>
                 </imageView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-5q-m3l">
@@ -121,6 +122,18 @@
                         <rect key="frame" x="23" y="427" width="304" height="44"/>
                     </variation>
                 </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eP-uT-uVN">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Clear">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="270" y="276" width="46" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="clearImage:" destination="-1" eventType="touchUpInside" id="rUi-52-OdC"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <variation key="default">
@@ -135,6 +148,7 @@
                     <exclude reference="k83-bG-h3U"/>
                     <exclude reference="JJu-Js-sea"/>
                     <exclude reference="Vpl-5q-m3l"/>
+                    <exclude reference="7eP-uT-uVN"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -149,6 +163,7 @@
                     <include reference="k83-bG-h3U"/>
                     <include reference="JJu-Js-sea"/>
                     <include reference="Vpl-5q-m3l"/>
+                    <include reference="7eP-uT-uVN"/>
                 </mask>
             </variation>
             <connections>
