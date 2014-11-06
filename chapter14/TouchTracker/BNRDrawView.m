@@ -158,7 +158,8 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)other
 {
     NSLog(@"Recognized double tap");
     [self.linesInProgress removeAllObjects];
-    [self.finishedLines removeAllObjects];
+   // [self.finishedLines removeAllObjects];
+    self.finishedLines=[[NSMutableArray alloc]init];
     [self setNeedsDisplay];
      
 }
@@ -172,6 +173,12 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)other
     [bp moveToPoint:line.begin];
     [bp addLineToPoint:line.end];
     [bp stroke];
+    float f=0.0;
+    for(int i=0;i<1000000;i++)
+    {
+        f=f+sin(sin(sin(time(NULL)+i)));
+    }
+    NSLog(@"f=%f",f);
 }
 
 - (void)drawRect:(CGRect)rect
@@ -192,7 +199,18 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)other
         [[UIColor greenColor] set];
         [self strokeLine:self.selectedLine];
     }
-    
+   
+
+}
+
+-(int) numberOfLines
+{
+    int count;
+    if(self.linesInProgress && self.finishedLines)
+    {
+        count=[self.linesInProgress count]+ [self.finishedLines count];
+    }
+    return count;
 }
 -(BNRLine *) lineAtPoint:(CGPoint)p
 {
@@ -266,6 +284,8 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)other
 
         [self.finishedLines addObject:line];
         [self.linesInProgress removeObjectForKey:key];
+        
+        line.containingArray=self.finishedLines;
     }
 
     [self setNeedsDisplay];
