@@ -1,13 +1,14 @@
 //
 //  AppDelegate.m
-//  TouchTracker
+//  Homepwner
 //
-//  Created by Hari  on 11/5/14.
+//  Created by Hari  on 10/18/14.
 //  Copyright (c) 2014 Pensersoft. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BNRDrawViewController.h"
+#import "BNRItemsViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,18 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    BNRDrawViewController *dvc = [[BNRDrawViewController alloc] init];
-    self.window.rootViewController = dvc;
+    BNRItemsViewController *itemsViewController=[[BNRItemsViewController alloc]init];
+   
+    UINavigationController *navController=[[UINavigationController alloc] initWithRootViewController:itemsViewController];
     
+    self.window.rootViewController=navController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-#ifdef VIEW_DEBUG
-    NSLOG(@"%@",[self.window performSelector:@selector(recursiveDescription)]);
-#endif
-    
     return YES;
 }
 

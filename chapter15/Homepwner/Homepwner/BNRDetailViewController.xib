@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRDetailViewController">
+            <connections>
+                <outlet property="clearButton" destination="7eP-uT-uVN" id="AZR-Lf-0Jb"/>
+                <outlet property="dateLabel" destination="2fh-t5-4k3" id="ODa-id-hJ8"/>
+                <outlet property="nameField" destination="PcD-3C-tsD" id="GZK-n1-8dS"/>
+                <outlet property="serialNumberField" destination="ejK-Qm-d3O" id="iT2-bc-bWI"/>
+                <outlet property="toolBar" destination="Vpl-5q-m3l" id="GSK-Lf-faR"/>
+                <outlet property="valueField" destination="590-gf-ulC" id="UYM-Ro-aUD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="center" id="i5M-Pr-FkT" customClass="UIControl">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3Z-Fs-Dhk">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="20" y="85" width="46" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-pP-B2d">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="20" y="121" width="94" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rr-JR-u8R">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="23" y="170" width="64" height="21"/>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nameField" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcD-3C-tsD">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="135" y="70" width="160" height="30"/>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="hqW-tc-K9z"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-t5-4k3">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="20" y="210" width="152" height="33"/>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SerialField" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-Qm-d3O">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="135" y="112" width="152" height="30"/>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gm5-fz-THw"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ValueField" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="590-gf-ulC">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="135" y="161" width="166" height="30"/>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Rkb-cV-93f"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k83-bG-h3U">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Change">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="199" y="212" width="102" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="changeDate:" destination="-1" eventType="touchUpInside" id="GBi-Cv-Gzy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eP-uT-uVN">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Clear">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="270" y="276" width="46" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="clearImage:" destination="-1" eventType="touchUpInside" id="rUi-52-OdC"/>
+                    </connections>
+                </button>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-5q-m3l">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="camera" id="98i-Vw-mry">
+                            <connections>
+                                <action selector="takePicture:" destination="-1" id="A8j-Z4-PbF"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="11" y="509" width="301" height="44"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="756" width="400" height="44"/>
+                    </variation>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="K3Z-Fs-Dhk"/>
+                    <exclude reference="6X7-pP-B2d"/>
+                    <exclude reference="2Rr-JR-u8R"/>
+                    <exclude reference="PcD-3C-tsD"/>
+                    <exclude reference="2fh-t5-4k3"/>
+                    <exclude reference="ejK-Qm-d3O"/>
+                    <exclude reference="590-gf-ulC"/>
+                    <exclude reference="k83-bG-h3U"/>
+                    <exclude reference="7eP-uT-uVN"/>
+                    <exclude reference="Vpl-5q-m3l"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="K3Z-Fs-Dhk"/>
+                    <include reference="6X7-pP-B2d"/>
+                    <include reference="2Rr-JR-u8R"/>
+                    <include reference="PcD-3C-tsD"/>
+                    <include reference="2fh-t5-4k3"/>
+                    <include reference="ejK-Qm-d3O"/>
+                    <include reference="590-gf-ulC"/>
+                    <include reference="k83-bG-h3U"/>
+                    <include reference="7eP-uT-uVN"/>
+                    <include reference="Vpl-5q-m3l"/>
+                </mask>
+            </variation>
+            <connections>
+                <action selector="backgroundTapped:" destination="-1" eventType="valueChanged" id="WX5-rs-jnb"/>
+            </connections>
+            <point key="canvasLocation" x="-405" y="-675.5"/>
+        </view>
+    </objects>
+</document>
