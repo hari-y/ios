@@ -55,8 +55,17 @@
     if ([UIImagePickerController
          isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        // Gold Challenge Code
+        CameraOverlayView *chv = [[CameraOverlayView alloc] init];
+        [chv setFrame:CGRectMake(0, 0, [imagePicker view].bounds.size.width, [imagePicker view].bounds.size.height - 52)];
+        [imagePicker setCameraOverlayView:chv];
+        // Gold Challenge Code end
     } else {
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        // Gold Challenge Code
+        CameraOverlayView *chv = [[CameraOverlayView alloc] init];
+       
+        // Gold Challenge Code end
     }
     
     //  next three lines are from for the more curious: recording video

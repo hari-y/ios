@@ -24,13 +24,30 @@
 
     if (self) {
         self.linesInProgress = [[NSMutableDictionary alloc] init];
-        self.finishedLines = [[NSMutableArray alloc] init];
+        self.finishedLines = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archiveLinesLocation]];
+        if (!self.finishedLines) self.finishedLines = [[NSMutableArray alloc] init];
+
         self.backgroundColor = [UIColor grayColor];
-       // self.multipleTouchEnabled = YES;
     }
 
     return self;
 }
+
+//Bronze challenge
+
+-(BOOL) saveChanges {
+    
+    [NSKeyedArchiver archiveRootObject:self.finishedLines toFile:[self archiveLinesLocation]];
+    return true;
+}
+
+-(NSString*)archiveLinesLocation {
+    NSArray* documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentDirectory = [documentDirectories firstObject];
+    return [documentDirectory stringByAppendingPathComponent:@"tt-archiveLines"];
+}
+
+//End Bronze challenge
 
 - (void)strokeLine:(BNRLine *)line
 {

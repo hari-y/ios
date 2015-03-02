@@ -412,6 +412,7 @@
 				478EEECC1A0ABF6F002BA73E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478EEECD1A0ABF6F002BA73E /* Build configuration list for PBXNativeTarget "TouchTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				478EEECF1A0ABF6F002BA73E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

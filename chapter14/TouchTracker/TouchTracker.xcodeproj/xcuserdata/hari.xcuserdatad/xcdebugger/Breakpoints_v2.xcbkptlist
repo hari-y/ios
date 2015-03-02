@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "231"
             endingLineNumber = "231"
-            landmarkName = "-touchesBegan:withEvent:"
+            landmarkName = "-lineAtPoint:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "230"
             endingLineNumber = "230"
-            landmarkName = "-touchesBegan:withEvent:"
+            landmarkName = "-lineAtPoint:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
