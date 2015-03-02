@@ -8,8 +8,11 @@
 
 import UIKit
 import Swell
+import XCGLogger
+
 class ViewController: UIViewController {
  let swellLogger = Swell.getLogger("ViewController")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,6 +48,17 @@ class ViewController: UIViewController {
             let closureName = "My Closure";
             return "Testing Closure name "+closureName;
         }
+    }
+    
+    
+    @IBAction func createXCGLogger(sender: AnyObject) {
+        xcgLogger.verbose("A verbose message, usually useful when working on a specific problem");
+        xcgLogger.debug("A debug message")
+        xcgLogger.info("An info message, probably useful to power users looking in console.app");
+        xcgLogger.warning("A warning message, may indicate a possible error")
+        xcgLogger.error("An error occurred, but it's recoverable, just info about what happened");
+        xcgLogger.severe("A severe error occurred, we are likely about to crash now");
+        
     }
     
 }

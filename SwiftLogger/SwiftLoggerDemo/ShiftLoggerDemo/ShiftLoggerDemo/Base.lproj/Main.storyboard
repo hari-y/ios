@@ -34,6 +34,15 @@
                                     <action selector="createSwellLog:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KBd-1f-eXn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7l-zQ-Tlk">
+                                <rect key="frame" x="107" y="250" width="137" height="30"/>
+                                <state key="normal" title="CreateXCGLogger">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createXCGLogger:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VqD-cX-Rw2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

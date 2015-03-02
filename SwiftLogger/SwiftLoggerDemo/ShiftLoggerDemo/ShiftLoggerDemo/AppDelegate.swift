@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import XCGLogger
+let xcgLogger = XCGLogger.defaultInstance();
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //can create multiple instances of these
+        let logPath : NSString = "/Users/iOS/XCGLogger.txt".stringByExpandingTildeInPath
+        xcgLogger.setup(logLevel: .Warning, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath);
         return true
     }
 

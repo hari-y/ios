@@ -13,7 +13,7 @@
 		<key>SWLLocation</key>
 		<string>console file</string>
 		<key>SWLLocationFilename</key>
-		<string>logs.txt</string>
+		<string>/Users/iOS/SwellLogs.txt</string>
 	</dict>
 </dict>
 </plist>
