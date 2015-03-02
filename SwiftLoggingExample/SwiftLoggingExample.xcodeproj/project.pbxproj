@@ -11,16 +11,14 @@
 		47F3CA5D1AA52CFC00524849 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F3CA5B1AA52CFC00524849 /* LaunchScreen.xib */; };
 		47F3CA691AA52CFC00524849 /* SwiftLoggingExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3CA681AA52CFC00524849 /* SwiftLoggingExampleTests.swift */; };
 		47F3CA751AA52D3600524849 /* Swell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA731AA52D3600524849 /* Swell.framework */; };
-		47F3CA761AA52D3600524849 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA741AA52D3600524849 /* XCGLogger.framework */; };
-		47F3CA771AA52D5B00524849 /* Swell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA731AA52D3600524849 /* Swell.framework */; };
-		47F3CA781AA52D5B00524849 /* Swell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA731AA52D3600524849 /* Swell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47F3CA791AA52D5B00524849 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA741AA52D3600524849 /* XCGLogger.framework */; };
-		47F3CA7A1AA52D5B00524849 /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA741AA52D3600524849 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47F3CA8F1AA52E5C00524849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F3CA8B1AA52E5C00524849 /* Main.storyboard */; };
 		47F3CA901AA52E5C00524849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3CA8C1AA52E5C00524849 /* AppDelegate.swift */; };
 		47F3CA911AA52E5C00524849 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3CA8D1AA52E5C00524849 /* ViewController.swift */; };
 		47F3CA921AA52E5C00524849 /* ZHLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3CA8E1AA52E5C00524849 /* ZHLogger.swift */; };
 		47F3CA941AA52E8700524849 /* Swell.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47F3CA931AA52E8700524849 /* Swell.plist */; };
+		47F3CA971AA52F4000524849 /* Swell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA951AA52F4000524849 /* Swell.framework */; };
+		47F3CA9A1AA52FB000524849 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3CA991AA52FB000524849 /* XCGLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				47F3CA781AA52D5B00524849 /* Swell.framework in Embed Frameworks */,
-				47F3CA7A1AA52D5B00524849 /* XCGLogger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,14 +52,16 @@
 		47F3CA621AA52CFC00524849 /* SwiftLoggingExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLoggingExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F3CA671AA52CFC00524849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F3CA681AA52CFC00524849 /* SwiftLoggingExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLoggingExampleTests.swift; sourceTree = "<group>"; };
-		47F3CA731AA52D3600524849 /* Swell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swell.framework; path = ../SwiftLoggingBackup/Swell.framework; sourceTree = "<group>"; };
-		47F3CA741AA52D3600524849 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = ../SwiftLoggingBackup/XCGLogger.framework; sourceTree = "<group>"; };
+		47F3CA731AA52D3600524849 /* Swell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swell.framework; path = /Users/hari/dev/git/ios/SwiftLoggingBackup/Swell.framework; sourceTree = "<absolute>"; };
+		47F3CA741AA52D3600524849 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = /Users/hari/dev/git/ios/SwiftLoggingBackup/XCGLogger.framework; sourceTree = "<absolute>"; };
 		47F3CA8A1AA52E5C00524849 /* SwiftLoggingExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLoggingExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		47F3CA8B1AA52E5C00524849 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		47F3CA8C1AA52E5C00524849 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F3CA8D1AA52E5C00524849 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47F3CA8E1AA52E5C00524849 /* ZHLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHLogger.swift; sourceTree = "<group>"; };
 		47F3CA931AA52E8700524849 /* Swell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Swell.plist; sourceTree = "<group>"; };
+		47F3CA951AA52F4000524849 /* Swell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swell.framework; path = SwiftLoggingExample/Swell.framework; sourceTree = "<group>"; };
+		47F3CA991AA52FB000524849 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = SwiftLoggingExample/XCGLogger.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +70,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F3CA751AA52D3600524849 /* Swell.framework in Frameworks */,
+				47F3CA9A1AA52FB000524849 /* XCGLogger.framework in Frameworks */,
 				47F3CA791AA52D5B00524849 /* XCGLogger.framework in Frameworks */,
-				47F3CA761AA52D3600524849 /* XCGLogger.framework in Frameworks */,
-				47F3CA771AA52D5B00524849 /* Swell.framework in Frameworks */,
+				47F3CA971AA52F4000524849 /* Swell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +149,8 @@
 		47F3CA721AA52D1C00524849 /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
-				47F3CA731AA52D3600524849 /* Swell.framework */,
-				47F3CA741AA52D3600524849 /* XCGLogger.framework */,
+				47F3CA991AA52FB000524849 /* XCGLogger.framework */,
+				47F3CA951AA52F4000524849 /* Swell.framework */,
 			);
 			name = FrameWorks;
 			sourceTree = "<group>";
@@ -380,6 +378,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/hari/dev/git/ios/SwiftLoggingBackup,
+					"$(PROJECT_DIR)/SwiftLoggingExample",
 				);
 				INFOPLIST_FILE = SwiftLoggingExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -397,6 +396,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/hari/dev/git/ios/SwiftLoggingBackup,
+					"$(PROJECT_DIR)/SwiftLoggingExample",
 				);
 				INFOPLIST_FILE = SwiftLoggingExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
