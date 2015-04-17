@@ -13,6 +13,7 @@
 		4753AE881AD9DC6A0060267C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4753AE871AD9DC6A0060267C /* Images.xcassets */; };
 		4753AE8B1AD9DC6A0060267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4753AE891AD9DC6A0060267C /* LaunchScreen.xib */; };
 		4753AE971AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753AE961AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests.swift */; };
+		4794051B1AE09A5700CBCF0C /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4794051A1AE09A5700CBCF0C /* KeyChain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4753AE901AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerPrintAuthenticationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4753AE951AD9DC6A0060267C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4753AE961AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPrintAuthenticationExampleTests.swift; sourceTree = "<group>"; };
+		4794051A1AE09A5700CBCF0C /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyChain.swift; path = ../KeyChain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +61,8 @@
 		4753AE721AD9DC6A0060267C = {
 			isa = PBXGroup;
 			children = (
-				4753AE7D1AD9DC6A0060267C /* FingerPrintAuthenticationExample */,
-				4753AE931AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests */,
+				4753AE7D1AD9DC6A0060267C /* FingerPrintExample */,
+				4753AE931AD9DC6A0060267C /* FingerPrintExampleTests */,
 				4753AE7C1AD9DC6A0060267C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,9 +76,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4753AE7D1AD9DC6A0060267C /* FingerPrintAuthenticationExample */ = {
+		4753AE7D1AD9DC6A0060267C /* FingerPrintExample */ = {
 			isa = PBXGroup;
 			children = (
+				4794051A1AE09A5700CBCF0C /* KeyChain.swift */,
 				4753AE801AD9DC6A0060267C /* AppDelegate.swift */,
 				4753AE821AD9DC6A0060267C /* ViewController.swift */,
 				4753AE841AD9DC6A0060267C /* Main.storyboard */,
@@ -84,6 +87,7 @@
 				4753AE891AD9DC6A0060267C /* LaunchScreen.xib */,
 				4753AE7E1AD9DC6A0060267C /* Supporting Files */,
 			);
+			name = FingerPrintExample;
 			path = FingerPrintAuthenticationExample;
 			sourceTree = "<group>";
 		};
@@ -95,12 +99,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4753AE931AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests */ = {
+		4753AE931AD9DC6A0060267C /* FingerPrintExampleTests */ = {
 			isa = PBXGroup;
 			children = (
 				4753AE961AD9DC6A0060267C /* FingerPrintAuthenticationExampleTests.swift */,
 				4753AE941AD9DC6A0060267C /* Supporting Files */,
 			);
+			name = FingerPrintExampleTests;
 			path = FingerPrintAuthenticationExampleTests;
 			sourceTree = "<group>";
 		};
@@ -168,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4753AE761AD9DC6A0060267C /* Build configuration list for PBXProject "FingerPrintAuthenticationExample" */;
+			buildConfigurationList = 4753AE761AD9DC6A0060267C /* Build configuration list for PBXProject "FingerPrintExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4753AE831AD9DC6A0060267C /* ViewController.swift in Sources */,
+				4794051B1AE09A5700CBCF0C /* KeyChain.swift in Sources */,
 				4753AE811AD9DC6A0060267C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FingerPrintAuthenticationExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -348,7 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FingerPrintAuthenticationExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -391,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4753AE761AD9DC6A0060267C /* Build configuration list for PBXProject "FingerPrintAuthenticationExample" */ = {
+		4753AE761AD9DC6A0060267C /* Build configuration list for PBXProject "FingerPrintExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4753AE981AD9DC6A0060267C /* Debug */,

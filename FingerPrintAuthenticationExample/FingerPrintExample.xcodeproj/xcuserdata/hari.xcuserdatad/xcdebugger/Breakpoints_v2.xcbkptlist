@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FingerPrintAuthenticationExample/ViewController.swift"
-            timestampString = "450488183.510168"
+            filePath = "KeyChain.swift"
+            timestampString = "450934365.278984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "testTouchId(_:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "load(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

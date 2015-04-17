@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FingerPrintAuthenticationExample.xcscheme</key>
+		<key>HomePwner.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4753AE7A1AD9DC6A0060267C</key>
+		<key>520AA47A187C4EC00048F174</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4753AE8F1AD9DC6A0060267C</key>
+		<key>520AA495187C4EC00048F174</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		479405191AE0099900CBCF0C /* BNRPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 479405181AE0099900CBCF0C /* BNRPopoverBackgroundView.m */; };
 		520AA47F187C4EC00048F174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520AA47E187C4EC00048F174 /* Foundation.framework */; };
 		520AA481187C4EC00048F174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520AA480187C4EC00048F174 /* CoreGraphics.framework */; };
 		520AA483187C4EC00048F174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520AA482187C4EC00048F174 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		479405171AE0099900CBCF0C /* BNRPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPopoverBackgroundView.h; sourceTree = "<group>"; };
+		479405181AE0099900CBCF0C /* BNRPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPopoverBackgroundView.m; sourceTree = "<group>"; };
 		520AA47B187C4EC00048F174 /* HomePwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		520AA47E187C4EC00048F174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		520AA480187C4EC00048F174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 		520AA484187C4EC00048F174 /* HomePwner */ = {
 			isa = PBXGroup;
 			children = (
+				479405171AE0099900CBCF0C /* BNRPopoverBackgroundView.h */,
+				479405181AE0099900CBCF0C /* BNRPopoverBackgroundView.m */,
 				520AA48D187C4EC00048F174 /* BNRAppDelegate.h */,
 				520AA48E187C4EC00048F174 /* BNRAppDelegate.m */,
 				520AA4B0187C4F910048F174 /* BNRItem.h */,
@@ -220,6 +225,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Big Nerd Ranch";
 				TargetAttributes = {
+					520AA47A187C4EC00048F174 = {
+						DevelopmentTeam = NVQUQAXUBW;
+					};
 					520AA495187C4EC00048F174 = {
 						TestTargetID = 520AA47A187C4EC00048F174;
 					};
@@ -274,6 +282,7 @@
 				520AA4C3187CAA690048F174 /* BNRImageStore.m in Sources */,
 				520AA4AF187C4EF00048F174 /* BNRItemsViewController.m in Sources */,
 				520AA4B2187C4F910048F174 /* BNRItem.m in Sources */,
+				479405191AE0099900CBCF0C /* BNRPopoverBackgroundView.m in Sources */,
 				520AA48B187C4EC00048F174 /* main.m in Sources */,
 				520AA48F187C4EC00048F174 /* BNRAppDelegate.m in Sources */,
 			);

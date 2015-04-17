@@ -10,6 +10,7 @@
 #import "BNRItem.h"
 #import "BNRImageStore.h"
 #import "BNRItemStore.h"
+#import "BNRPopoverBackgroundView.h"
 
 @interface BNRDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate,
     UITextFieldDelegate, UIPopoverControllerDelegate>
@@ -204,7 +205,7 @@
 
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
 
-    // If the device ahs a camera, take a picture, otherwise,
+    // If the device has a camera, take a picture, otherwise,
     // just pick from the photo library
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -219,7 +220,12 @@
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         // Create a new popover controller that will display the imagePicker
         self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
-
+        
+        //gold challenge change background
+        self.imagePickerPopover.popoverBackgroundViewClass = [BNRPopoverBackgroundView class];
+        
+        //End gold challenge
+        
         self.imagePickerPopover.delegate = self;
 
         // Display the popover controller; sender
@@ -227,9 +233,10 @@
         [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
                                         permittedArrowDirections:UIPopoverArrowDirectionAny
                                                         animated:YES];
-    } else {
-        [self presentViewController:imagePicker animated:YES completion:NULL];
+   } else {
+       [self presentViewController:imagePicker animated:YES completion:NULL];
     }
+   
 }
 
 - (IBAction)backgroundTapped:(id)sender
